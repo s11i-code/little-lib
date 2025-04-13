@@ -1,0 +1,56 @@
+{
+  "name": "little-lib",
+  "version": "1.0.3",
+  "description": "A lightweight, accessible popover component for React applications.",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "format": "npx @biomejs/biome format --write ./src",
+    "lint": "npx @biomejs/biome lint --write ./src",
+    "check": "npx @biomejs/biome check --write ./src",
+    "check:ci": "npx @biomejs/biome ci ./src"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-aria-components": "^1.8.0",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.0.3",
+    "@types/react-dom": "^19.0.3",
+    "@vitejs/plugin-react": "^4.3.3",
+    "globals": "^15.11.0",
+    "semantic-release": "^24.2.1",
+    "typescript": "^5.7.3",
+    "vite": "^5.4.10"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/s11i-code/little-lib.git"
+  },
+  "keywords": [
+    "react",
+    "popover",
+    "component"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
