@@ -1,85 +1,93 @@
 .button {
-  --button-primary-bg:    var(--color-primary);
-  --button-primary-hover: var(--color-primary-hover);
-  --button-primary-text: var(--color-primary-text);
-  --button-secondary-bg: var(--color-secondary);
-  --button-secondary-hover: var(--color-secondary-hover);
-  --button-secondary-text: var(--color-secondary-text);
-  --button-border-radius: var(--border-radius-md);
-  --button-disabled-bg: var(--color-disabled);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: var(--button-border-radius);
-  border: none;
-  outline: none;
-  gap: 0.5rem;
+	--button-primary-bg: var(--color-primary);
+	--button-primary-hover: var(--color-primary-hover);
+	--button-primary-text: var(--color-primary-text);
+	--button-secondary-bg: var(--color-secondary);
+	--button-secondary-hover: var(--color-secondary-hover);
+	--button-secondary-text: var(--color-secondary-text);
+	--button-border-radius: var(--border-radius-md);
+	--button-disabled-bg: var(--color-disabled);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: var(--button-border-radius);
+	border: none;
+	outline: none;
+	gap: 0.5rem;
 }
 
 .button:focus-visible {
-  outline: 2px solid var(--button-primary-bg);
-  outline-offset: 2px;
+	outline: 2px solid var(--button-primary-bg);
+	outline-offset: 2px;
 }
 
 /* Sizes */
 .size-small {
-  padding: 0.5rem 1rem;
-  font-size: 14px;
+	padding: 0.5rem 1rem;
+	font-size: 14px;
 }
 
 .size-medium {
-  padding: 0.5rem 1rem;
-  font-size: 16px;
+	padding: 0.5rem 1rem;
+	font-size: 16px;
 }
 
 /* Variants */
 .variant-contained {
-  border: none;
+	border: none;
 }
 
 .variant-outlined {
-  background: transparent;
-  border: 1px solid currentColor;
+	background: transparent;
+	border: 1px solid currentColor;
 }
 
 /* Themes */
 .theme-primary {
-  background-color: var(--button-primary-bg);
-  color: var(--button-primary-text);
+	background-color: var(--button-primary-bg);
+	color: var(--button-primary-text);
 }
 
 .theme-primary:hover:not(:disabled) {
-  background-color: var(--button-primary-hover);
+	background-color: var(--button-primary-hover);
 }
 
 .theme-primary.variant-outlined {
-  color: var(--button-primary-bg);
-  border-color: var(--button-primary-bg);
+	color: var(--button-primary-bg);
+	border-color: var(--button-primary-bg);
 }
 
 .theme-primary.variant-outlined:hover:not(:disabled) {
-  background-color: color-mix(in srgb, var(--button-primary-bg) 10%, transparent);
+	background-color: color-mix(
+		in srgb,
+		var(--button-primary-bg) 10%,
+		transparent
+	);
 }
 
 .theme-secondary {
-  background-color: var(--button-secondary-bg);
-  color: var(--button-secondary-text);
+	background-color: var(--button-secondary-bg);
+	color: var(--button-secondary-text);
 }
 
 .theme-secondary:hover:not(:disabled) {
-  background-color: var(--button-secondary-hover);
+	background-color: var(--button-secondary-hover);
 }
 
 .theme-secondary.variant-outlined {
-  color: var(--button-secondary-bg);
-  border-color: var(--button-secondary-bg);
+	color: var(--button-secondary-bg);
+	border-color: var(--button-secondary-bg);
 }
 
 .theme-secondary.variant-outlined:hover:not(:disabled) {
-  background-color: color-mix(in srgb, var(--button-secondary-bg) 10%, transparent);
+	background-color: color-mix(
+		in srgb,
+		var(--button-secondary-bg) 10%,
+		transparent
+	);
 }
 
 /* Disabled state */
 .button:disabled {
-  background-color: var(--button-disabled-bg);
-} 
+	background-color: var(--button-disabled-bg);
+}

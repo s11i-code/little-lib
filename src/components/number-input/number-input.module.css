@@ -1,46 +1,40 @@
 .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border: 1px solid var(--color-secondary);
-  border-radius: var(--border-radius-md);
-  background-color: var(--color-white);
-  width: 8rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border: 1px solid var(--color-secondary);
+	border-radius: var(--border-radius-md);
+	background-color: var(--color-white);
+	width: 8rem;
 }
 
 .container:hover:not(.disabled) {
-  border-color: var(--color-primary);
+	border-color: var(--color-primary);
 }
 
-
 .input {
-  border-radius: var(--border-radius-md);
-  padding: var(--spacing-xs) var(--spacing-sm);
-  border: none;
-  outline: none;
-  text-align: center;
-  background: transparent;
-  width: 2rem;
-  color: var(--color-secondary-text);
+	border-radius: var(--border-radius-md);
+	padding: var(--spacing-xs) var(--spacing-sm);
+	border: none;
+	outline: none;
+	text-align: center;
+	background: transparent;
+	width: 2rem;
+	color: var(--color-secondary-text);
 }
 
 .input:disabled {
-  cursor: not-allowed;
-  color: var(--color-secondary);
+	cursor: not-allowed;
+	color: var(--color-secondary);
 }
 
 /* Remove spinner buttons from number input */
 .input::-webkit-outer-spin-button,
 .input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+	-webkit-appearance: none;
+	margin: 0;
 }
-
-
 
 .button {
-  font-size: 2rem;
+	font-size: 2rem;
 }
-
-
-
