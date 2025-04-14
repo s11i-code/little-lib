@@ -1,0 +1,8 @@
+This is a library of reusable components for React. 
+
+The components MUST follow these hard rules:
+- They are located in the `src/components` folder. Each component has its own folder there with a CSS file and a Typescript file. 
+- They are styled using CSS modules
+- They are well-typed using Typescript
+
+The components are allowed to use the `react-aria-components` library but no other libraries. 
