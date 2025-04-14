@@ -6,26 +6,23 @@ export type ButtonSize = "small" | "medium";
 export type ButtonVariant = "contained" | "outlined";
 export type ButtonTheme = "primary" | "secondary";
 
-export interface ButtonProps {
-	onPress?: () => void;
-	children?: ReactNode;
+export interface ButtonProps extends ComponentProps<typeof AriaButton> {
 	size?: ButtonSize;
 	variant?: ButtonVariant;
 	theme?: ButtonTheme;
-	disabled?: boolean;
-	type?: ComponentProps<typeof AriaButton>["type"];
-	icon?: ReactNode;
 	iconPosition?: "left" | "right";
+	className?: never;
+	children?: ReactNode;
+	icon?: ReactNode;
 }
 
 export const Button = ({
-	children,
 	size = "medium",
 	variant = "contained",
 	theme = "primary",
-	disabled: disabled = false,
 	type = "button",
 	icon,
+	children,
 	iconPosition = "left",
 	onPress,
 	...props
@@ -43,7 +40,6 @@ export const Button = ({
 		<AriaButton
 			{...props}
 			type={type}
-			isDisabled={disabled}
 			onPress={onPress}
 			className={buttonClasses}
 		>

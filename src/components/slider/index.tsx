@@ -5,19 +5,23 @@ import {
 	SliderTrack,
 } from "react-aria-components";
 import styles from "./Slider.module.css";
+import { ComponentProps } from "react";
 
-export function Slider({
-	value,
-	onChange,
-}: { value: number; onChange: (value: number) => void }) {
-	return (
+interface SliderProps extends ComponentProps<typeof AriaSlider> {
+	className?: never;
+}
+
+export function Slider(props: SliderProps) {
+
+  const hasValue = props.value !== undefined && !Number.isNaN(props.value)
+	
+  return (
 		<AriaSlider
-			value={value}
-			onChange={onChange}
+			{...props}
+      value={hasValue ? props.value : 0}
 			className={styles.slider}
-			defaultValue={30}
 		>
-			<SliderOutput />
+			{ hasValue && <SliderOutput /> }
 			<SliderTrack className={styles.track}>
 				<SliderThumb className={styles.thumb} />
 			</SliderTrack>
