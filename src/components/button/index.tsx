@@ -7,6 +7,7 @@ export type ButtonVariant = 'contained' | 'outlined';
 export type ButtonTheme = 'primary' | 'secondary';
 
 export interface ButtonProps {
+  onPress?: () => void;
   children?: ReactNode;
   size?: ButtonSize;
   variant?: ButtonVariant;
@@ -26,6 +27,7 @@ export const Button = ({
   type = 'button',
   icon,
   iconPosition = 'left',
+  onPress,
   ...props
 }: ButtonProps) => {
   const buttonClasses = [
@@ -40,6 +42,7 @@ export const Button = ({
       {...props}
       type={type}
       isDisabled={disabled}
+      onPress={onPress}
       className={buttonClasses}
     >
       {icon && iconPosition === 'left' && icon}

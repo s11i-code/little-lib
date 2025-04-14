@@ -1,17 +1,16 @@
 .button {
-  --button-primary-bg: #245866;
-  --button-primary-hover: #245866;
-  --button-primary-text: white;
-  --button-secondary-bg: #909090;
-  --button-secondary-hover: #EEEEEE;
-  --button-secondary-text: #1A1A1A;
-  --button-border-radius: 8px;
-  --button-disabled-bg: #eeeeee;
+  --button-primary-bg:    var(--color-primary);
+  --button-primary-hover: var(--color-primary-hover);
+  --button-primary-text: var(--color-primary-text);
+  --button-secondary-bg: var(--color-secondary);
+  --button-secondary-hover: var(--color-secondary-hover);
+  --button-secondary-text: var(--color-secondary-text);
+  --button-border-radius: var(--border-radius-md);
+  --button-disabled-bg: var(--color-disabled);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border-radius: var(--button-border-radius);
-  cursor: pointer;
   border: none;
   outline: none;
   gap: 0.5rem;

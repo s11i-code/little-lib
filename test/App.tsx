@@ -1,41 +1,16 @@
-import Popover from '../src/index'
-//import './App.css'
-
-
+import { useState } from "react";
+import { Button, NumberInput } from "../src/"
 
 function App() {
+  const [value, setValue] = useState<number|undefined>(-1);
 
-  const POPOVER_ID = "my-popover";
+  return <form >
+    <div>
+  <NumberInput min={-3} step={4} value={value} onChange={setValue} />
+  </div>
+  <Button>Submit</Button>
+</form>
 
-  return (
-    <>
-    <button popoverTarget={POPOVER_ID}>
-      Toggle popover
-    </button>
-    
-    <Popover remountChildrenOnShow ={true} position="top" id={POPOVER_ID}>
-
-      {({ showPopover, hidePopover, togglePopover, state }) => (
-        <>
-        
-        <h1>Popover in state {state}</h1>
-
-        <button onClick={togglePopover}>
-         Toggle via JS {}
-        </button>
-
-        {state === "open" ? ( <button onClick={hidePopover}>
-         Hide via JS
-         </button>) : ( <button onClick={showPopover}>
-         Show via JS
-         </button>)}
-    
-        </>
-      )}
-    </Popover>
-     
-    </>
-  )
 }
 
 export default App
