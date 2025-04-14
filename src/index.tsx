@@ -6,4 +6,5 @@ export { Button };
 import { NumberInput } from './components/number-input';
 export { NumberInput };
 
-
+import { Slider } from './components/slider';
+export { Slider };
