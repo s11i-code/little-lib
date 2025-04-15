@@ -20,7 +20,7 @@ function App() {
 		<form onSubmit={handleSubmit}>
 			<div className={styles.container}>
 				<label htmlFor="size">
-					Name <br />
+					<span className={styles.label}>Name</span>
 					<Input
 						value={name || ""}
 						id="size"
@@ -29,7 +29,7 @@ function App() {
 				</label>
 				<div className={styles.sizeContainer}>
 					<label htmlFor="size">
-						Size <br />
+						<span className={styles.label}>Size</span>
 						<NumberInput
 							aria-labelledby="size"
 							id="size"
