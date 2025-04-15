@@ -1,29 +1,17 @@
-.container {
-	
-	border: 1px solid var(--color-secondary);
-	border-radius: var(--border-radius-md);
-	background-color: var(--color-white);
-	width: 8rem;
+.group {
+	display: inline-flex;
+	align-items: center;
+
+	button:first-child {
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+	button:last-child {
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+	}
 }
-
-.container:hover:not(.disabled) {
-	border-color: var(--color-primary);
-}
-
-
-
-.input:disabled {
-	cursor: not-allowed;
-	color: var(--color-secondary);
-}
-
-/* Remove spinner buttons from number input */
-.input::-webkit-outer-spin-button,
-.input::-webkit-inner-spin-button {
-	-webkit-appearance: none;
-	margin: 0;
-}
-
-.button {
-	font-size: 2rem;
+.input {
+	width: 3rem;
+	text-align: center;
 }

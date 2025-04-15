@@ -1,26 +1,24 @@
-import {
-  Group,
-  Input,
-  Label,
-  NumberField
-} from 'react-aria-components';
+import { ComponentProps } from "react";
+import { Group, Input, NumberField } from "react-aria-components";
 import { Button } from "../button";
-import { ComponentProps } from 'react';
-import styles from './number-input.module.css';
+import styles from "./number-input.module.css";
 
-interface NumberInputProps extends ComponentProps<typeof NumberField> {}
+interface NumberInputProps extends ComponentProps<typeof NumberField> {
+	className?: never;
+}
 
-export function NumberInput (props: NumberInputProps) {
-	
-
+export function NumberInput(props: NumberInputProps) {
 	return (
-		<NumberField  {...props}>
-    <Group>
-      <Button theme="secondary" size="small" slot="decrement">-</Button>
-      <Input />
-      <Button  theme="secondary" size="small" slot="increment">+</Button>
-    </Group>
-  </NumberField>
+		<NumberField className={styles.container} {...props}>
+			<Group className={styles.group}>
+				<Button theme="secondary" size="small" slot="decrement">
+					-
+				</Button>
+				<Input className={styles.input} />
+				<Button theme="secondary" size="small" slot="increment">
+					+
+				</Button>
+			</Group>
+		</NumberField>
 	);
-};
-
+}
