@@ -1,5 +1,5 @@
 {
-	"name": "little-lib",
+	"name": "@s11i/little-lib",
 	"version": "1.0.3",
 	"description": "A lightweight, accessible popover component for React applications.",
 	"main": "./dist/index.umd.js",
