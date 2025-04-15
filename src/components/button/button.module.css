@@ -1,26 +1,21 @@
 .button {
 	--button-primary-bg: var(--color-primary);
-	--button-primary-hover: var(--color-primary-hover);
+	--button-primary-bg-accent: var(--color-primary-dark);
 	--button-primary-text: var(--color-primary-text);
 	--button-secondary-bg: var(--color-secondary);
-	--button-secondary-hover: var(--color-secondary-hover);
+	--button-secondary-bg-accent: var(--color-secondary-dark);
 	--button-secondary-text: var(--color-secondary-text);
 	--button-border-radius-md: var(--border-radius-md);
 	--button-border-radius-sm: var(--border-radius-sm);
 	--button-disabled-bg: var(--color-disabled);
+	--button-disabled-text: var(--color-disabled-text);
 
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
 	gap: var(--spacing-sm);
 	border: none;
-	outline: none;
 	gap: 0.5rem;
-}
-
-.button:focus-visible {
-	outline: 2px solid var(--button-primary-bg);
-	outline-offset: 2px;
 }
 
 /* Sizes */
@@ -36,38 +31,58 @@
 	border-radius: var(--button-border-radius-md);
 }
 
-/* Variants */
-.variant-contained {
-	border: none;
-}
+/* OUTLINED */
 
 .variant-outlined.theme-secondary {
-	background: transparent;
 	color: var(--button-secondary-text);
-	border: 1px solid var(--button-secondary-text);
+	border: 1px solid var(--button-secondary-bg);
+	background-color: transparent;
+	&:focus,
+	&:hover {
+		border-color: var(--button-secondary-bg-accent);
+	}
 }
 
 .variant-outlined.theme-primary {
-	background: transparent;
 	color: var(--button-primary-bg);
 	border: 1px solid var(--button-primary-bg);
+	background-color: transparent;
+	&:focus,
+	&:hover {
+		color: var(--button-primary-bg-accent);
+		border-color: var(--button-primary-bg-accent);
+	}
 }
 
-/* Themes */
-.theme-primary {
+/* CONTAINED */
+
+.variant-contained {
+	border: none;
+}
+.theme-primary.variant-contained {
 	background-color: var(--button-primary-bg);
 	color: var(--button-primary-text);
+	&:focus,
+	&:hover {
+		background-color: var(--button-primary-bg-accent);
+	}
 }
-
-.theme-primary:hover:not(:disabled) {
-	background-color: var(--button-primary-hover);
-}
-
-.theme-secondary:hover:not(:disabled) {
-	background-color: var(--button-secondary-hover);
+.theme-secondary.variant-contained {
+	background-color: var(--button-secondary-bg);
+	color: var(--button-secondary-text);
+	&:focus,
+	&:hover {
+		background-color: var(--button-secondary-bg-accent);
+	}
 }
 
 /* Disabled state */
-.button:disabled {
+.button.variant-contained:disabled {
+	color: var(--button-disabled-text);
 	background-color: var(--button-disabled-bg);
+}
+
+.button.variant-outlined:disabled {
+	color: var(--button-disabled-text);
+	border-color: var(--button-disabled-bg);
 }

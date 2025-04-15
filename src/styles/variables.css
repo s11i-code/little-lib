@@ -1,12 +1,13 @@
 :root {
 	/* Colors */
-	--color-primary: #245866;
-	--color-primary-hover: #245866;
-	--color-secondary: #dddddd;
-	--color-secondary-hover: #909090;
+	--color-primary: #4b7a8a;
+	--color-primary-dark: #245866;
+	--color-secondary: #eeeeee;
+	--color-secondary-dark: #dddddd;
 	--color-primary-text: white;
 	--color-secondary-text: #1a1a1a;
 	--color-disabled: #eeeeee;
+	--color-disabled-text: #909090;
 	/* Spacing */
 	--spacing-sm: 0.25rem;
 	--spacing-md: 0.5rem;
