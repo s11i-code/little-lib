@@ -5,7 +5,7 @@ import {
 	SliderThumb,
 	SliderTrack,
 } from "react-aria-components";
-import styles from "./Slider.module.css";
+import styles from "./slider.module.css";
 
 interface SliderProps extends ComponentProps<typeof AriaSlider> {
 	className?: never;
